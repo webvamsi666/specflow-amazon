@@ -1,0 +1,13 @@
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\obj\Debug\com.Amazon.csprojResolveAssemblyReference.cache
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\com.Amazon.dll.config
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\com.Amazon.dll
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\com.Amazon.pdb
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\nunit.framework.dll
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\TechTalk.SpecFlow.dll
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\WebDriver.dll
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\WebDriver.Support.dll
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\nunit.framework.xml
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\WebDriver.xml
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\WebDriver.Support.xml
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\obj\Debug\com.Amazon.dll
+c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\obj\Debug\com.Amazon.pdb
