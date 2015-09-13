@@ -1,12 +1,13 @@
-# com.Amazon-SpecFlow
+# com.Amazon-SpecFlow BDD
 
-Test automation suite for searching a book and adding to basket in Amazon.co.uk.
-Com.Amazon automation framework was created using SpecFlow BDD, Selenium WebDriver in C#.
+Test automation suite for searching a book and adding it to the basket in Amazon.co.uk.
+com.Amazon automation framework was created using SpecFlow BDD, Selenium WebDriver in C#.
 
 Instructions to run the automation suite:
-Clone the code from Git repository to local machine.
-Open com.Amazon.sln solution project in Visual Studio.
-Update/add below NuGet packages by Right-click on the com.Amazon in Solution Explorer and select Manage NuGet.
+
+1. Clone the code from Git repository to local machine.
+2. Open com.Amazon.sln solution project in Visual Studio.
+3. Update/add below NuGet packages by Right-click on the com.Amazon in Solution Explorer and select Manage NuGet.
 Packages
 
 •	NUnit
@@ -18,5 +19,5 @@ Packages
 Note: Please make sure the Firefox browser version is 38 or < 38
 
 To run:
-Right click on the AmazonShop.feature file from the Solution Explorer space and select run with SpecFlow runner.
+Right click on the AmazonShop.feature file from the Solution Explorer and select run with SpecFlow runner.
 The automation suite will invoke the Firefox instance and will run two scenarios. 
