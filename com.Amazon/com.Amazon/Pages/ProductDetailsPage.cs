@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
+//This is a Pageobject pattern file for Amazon Product details Page
+
 namespace com.Amazon
 {
     public class ProductDetailsPage
@@ -10,6 +12,7 @@ namespace com.Amazon
             PageFactory.InitElements(driver, this);
         }
 
+        #region "Page Elements"
         [FindsBy(How = How.CssSelector, Using = "#productTitle")]
         public IWebElement BookTitle { get; set; }
 
@@ -21,6 +24,7 @@ namespace com.Amazon
 
         [FindsBy(How = How.CssSelector, Using = "#nav-cart-count")]
         public IWebElement CartCount { get; set; }
+        #endregion
     }
 }
 

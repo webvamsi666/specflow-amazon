@@ -32,8 +32,8 @@ namespace com.Amazon
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AmazonShop", "In order to buy a book in Amazon\r\nAs a consumer I will search for a book \r\nI want" +
-                    " to add that book to my basket", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AmazonShop", "In order to buy a book in Amazon\r\nAs a consumer I will search for a book \r\nAnd I " +
+                    "want to add that book to my basket", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,13 +74,13 @@ namespace com.Amazon
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
-        testRunner.Given("I am on Amazon home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            testRunner.Given("I am on Amazon home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-        testRunner.When(string.Format("I enter \"{0}\" text into the search field", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            testRunner.When(string.Format("I enter \"{0}\" name into the search field", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-        testRunner.And("I click on search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("I click on search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-        testRunner.Then(string.Format("I should see my book \"{0}\" in the results list", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            testRunner.Then(string.Format("I should see my book \"{0}\" in the results list", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -93,18 +93,18 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("consumer add the book to the basket", exampleTags);
 #line 15
 this.ScenarioSetup(scenarioInfo);
+#line 16
+     testRunner.Given("I have nothing in my basket, it displays a total of \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
-  testRunner.Given("I have nothing in my basket, it displays a total of \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+     testRunner.When(string.Format("I search for a \"{0}\" in Amazon", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
-  testRunner.And(string.Format("I search for \"{0}\" book in Amazon", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+     testRunner.And(string.Format("I see the details page of the \"{0}\"", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
-  testRunner.And(string.Format("I see the details page of the \"{0}\"", book), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+     testRunner.And("I should see the book is \"In stock.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
-  testRunner.And("I should see the book is \"In stock.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+     testRunner.And("I add the book to the basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
-  testRunner.And("I add the book to the basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-  testRunner.Then("my basket should dispaly a total of \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("my basket should dispaly a total of \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using TechTalk.SpecFlow;
+
+// This is the helper class that will provide an instance of WebDriver and perform clean up activity at the end
 
 namespace com.Amazon
 {
@@ -20,6 +18,12 @@ namespace com.Amazon
             {
                 return driver ?? (driver = new FirefoxDriver());
             }
+        }
+
+        public static void GoToUrl(String url)
+        {
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
         }
 
         [AfterTestRun]

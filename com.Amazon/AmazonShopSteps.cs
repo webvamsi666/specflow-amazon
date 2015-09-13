@@ -1,27 +1,24 @@
 ﻿using System;
 using TechTalk.SpecFlow;
-using System.Threading;
-using TechTalk.SpecFlow;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using TechTalk.SpecFlow;
 
 namespace com.Amazon.steps
 {
     [Binding]
     public class AmazonShopSteps : Steps
     {
+        #region "Object creation & instantiation"
         ProductDetailsPage _productDetailsPage = new ProductDetailsPage(Base.Driver);
         AmazonHomePage _homePage = new AmazonHomePage(Base.Driver);
+        #endregion
 
         [Given(@"I am on Amazon home page")]
         public void GivenIAmOnAmazonHomePage()
         {
-            Base.Driver.Navigate().GoToUrl("https://www.amazon.co.uk/");
-            Base.Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            Base.GoToUrl("https://www.amazon.co.uk/");
         }
 
-        [When(@"I enter ""(.*)"" text into the search field")]
+        [When(@"I enter ""(.*)"" name into the search field")]
         public void WhenIEnterTextIntoTheSearchField(string bookName)
         {
             _homePage.SearchField.SendKeys(bookName);
@@ -36,7 +33,7 @@ namespace com.Amazon.steps
         [Then(@"I should see my book ""(.*)"" in the results list")]
         public void ThenIShouldSeeMyBookInTheResultsList(string bookName)
         {
-            _homePage.AssertBookFromResultsList(bookName);
+          Assert.IsTrue(_homePage.AssertBookFromResultsList(bookName)); 
         }
 
         [Given(@"I have nothing in my basket, it displays a total of ""(.*)""")]
@@ -46,28 +43,28 @@ namespace com.Amazon.steps
             Assert.AreEqual(cartCount, _productDetailsPage.CartCount.Text);
         }
 
-        [Given(@"I search for ""(.*)"" book in Amazon")]
-        public void GivenISearchForBookInAmazon(string bookName)
+        [When(@"I search for a ""(.*)"" in Amazon")]
+        public void WhenISearchForAInAmazon(string bookName)
         {
             _homePage.SearchField.SendKeys(bookName);
             _homePage.SearchField.Submit();
             _homePage.SelectBookFromList(bookName);
         }
 
-        [Given(@"I see the details page of the ""(.*)""")]
-        public void GivenISeeTheDetailsPageOfThe(string bookTitle)
+        [When(@"I see the details page of the ""(.*)""")]
+        public void WhenISeeTheDetailsPageOfThe(string bookTitle)
         {
             Assert.AreEqual(bookTitle, _productDetailsPage.BookTitle.Text);
         }
 
-        [Given(@"I should see the book is ""(.*)""")]
-        public void GivenIShouldSeeTheBookIs(String inStock)
+        [When(@"I should see the book is ""(.*)""")]
+        public void WhenIShouldSeeTheBookIs(String inStock)
         {
             Assert.AreEqual(inStock, _productDetailsPage.InStockMessage.Text);
         }
 
-        [Given(@"I add the book to the basket")]
-        public void GivenIAddTheBookToTheBasket()
+        [When(@"I add the book to the basket")]
+        public void WhenIAddTheBookToTheBasket()
         {
             _productDetailsPage.AddToBasketButton.Click();
         }
@@ -77,5 +74,6 @@ namespace com.Amazon.steps
         {
             Assert.AreEqual(cartCount, _productDetailsPage.CartCount.Text);
         }
+
     }
 }

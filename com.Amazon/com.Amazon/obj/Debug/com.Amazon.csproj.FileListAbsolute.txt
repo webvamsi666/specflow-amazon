@@ -11,3 +11,16 @@ c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\D
 c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\bin\Debug\WebDriver.Support.xml
 c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\obj\Debug\com.Amazon.dll
 c:\users\vamsi\documents\visual studio 2012\Projects\com.Amazon\com.Amazon\obj\Debug\com.Amazon.pdb
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\obj\Debug\com.Amazon.csprojResolveAssemblyReference.cache
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\com.Amazon.dll.config
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\com.Amazon.dll
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\com.Amazon.pdb
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\nunit.framework.dll
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\WebDriver.dll
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\WebDriver.Support.dll
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\nunit.framework.xml
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\WebDriver.xml
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\bin\Debug\WebDriver.Support.xml
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\obj\Debug\com.Amazon.dll
+C:\Users\vamsi\Documents\git\com.Amazon-Specflow\com.Amazon\com.Amazon\obj\Debug\com.Amazon.pdb

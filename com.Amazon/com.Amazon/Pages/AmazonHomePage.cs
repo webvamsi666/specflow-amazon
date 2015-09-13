@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+
+// This is a Pageobject pattern file for Amazon home Page
 
 namespace com.Amazon
 {
@@ -17,6 +14,7 @@ namespace com.Amazon
             PageFactory.InitElements(driver, this);
         }
 
+        #region "Page Elements"
         [FindsBy(How = How.CssSelector, Using = "#twotabsearchtextbox")]
         public IWebElement SearchField { get; set; }
 
@@ -25,21 +23,19 @@ namespace com.Amazon
 
         [FindsBy(How = How.CssSelector, Using = "#nav-cart-count")]
         public IWebElement CartCount { get; set; }
+        #endregion
 
-        public void AssertBookFromResultsList(String bookName)
+        #region "Page methods"
+        public Boolean AssertBookFromResultsList(String bookName)
         {
-            foreach (IWebElement option in ResultsList)
+            foreach (IWebElement book in ResultsList)
             {
-                if (option.Text.Equals(bookName))
+                if (book.Text.Equals(bookName))
                 {
-                    Assert.IsTrue(option.Text.Equals(bookName));
-                    break;
-                }
-                else
-                {
-                    Assert.Fail();
+                    return true;            
                 }
             }
+            return false;
         }
 
         public void SelectBookFromList(String bookName)
@@ -49,10 +45,11 @@ namespace com.Amazon
                 if (book.Text.Contains(bookName))
                 {
                     book.Click();
-                    break;
+                    return;
                 }
             }
         }
+        #endregion
     }
 }
 
